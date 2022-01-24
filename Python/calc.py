@@ -1,4 +1,6 @@
 #Create a simple Calculator with a GUI
+#This is a work in progress!
+
 
 #Import GUI library TKinter
 import tkinter
