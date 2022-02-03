@@ -14,7 +14,10 @@ mainWindow.title("RollRandomFaction")
 mainWindow.geometry('600x600')
 
 choice = ""
-textColor = "white"
+textColor = "black"
+
+
+
 #add Widgets
 
 #label for end result
@@ -22,7 +25,7 @@ randLabel = Label(mainWindow, text =choice,fg=textColor)
 
 #Return a random choice from a list of posible factions
 def chooseRand():
-    factionList = ["Aeon", "UEF", "Cybran"]
+    factionList = ["Aeon", "UEF", "Cybran","Seraphim"]
     choice = random.choice(factionList)
     randLabel.config(text=choice)
     # randLabel = Label(mainWindow, text=f"Chosen Faction: {random.choice(factionList)}").pack()
