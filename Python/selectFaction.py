@@ -13,8 +13,24 @@ mainWindow=tkinter.Tk()
 mainWindow.title("RollRandomFaction")
 mainWindow.geometry('600x600')
 
+#Create global values for labels and such.
 choice = ""
 textColor = "black"
+
+
+#Create class for factions
+class Faction:
+    def __init__(self,name,color):
+        self.name = name
+        self.color = color
+    
+
+
+#Create the factions
+uef = Faction("UEF", "blue")
+aeon = Faction("Aeon","green")
+cybran = Faction("Cybran","red")
+seraphim = Faction("Seraphim","yellow")
 
 
 
@@ -25,10 +41,10 @@ randLabel = Label(mainWindow, text =choice,fg=textColor)
 
 #Return a random choice from a list of posible factions
 def chooseRand():
-    factionList = ["Aeon", "UEF", "Cybran","Seraphim"]
+    factionList = [uef,aeon,cybran,seraphim]
     choice = random.choice(factionList)
-    randLabel.config(text=choice)
-    # randLabel = Label(mainWindow, text=f"Chosen Faction: {random.choice(factionList)}").pack()
+    randLabel.config(text=choice.name)
+    randLabel.config(fg=choice.color)
 
 RandBtn=Button(mainWindow, text="Get Random Faction",command=chooseRand)
 
