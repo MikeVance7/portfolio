@@ -9,14 +9,18 @@ import tkinter
 from tkinter import *
 import random
 
+
+
 #Create the window
 mainWindow=tkinter.Tk()
 mainWindow.title("RollRandomFaction")
-mainWindow.geometry('600x600')
+mainWindow.geometry('205x250')
 
-#Create global values for labels and such.
-choice = "Click below"
-textColor = "black"
+
+
+#---------------------
+#Classes and functions
+#---------------------
 
 #Create class for factions
 class Faction:
@@ -24,8 +28,7 @@ class Faction:
         self.name = name
         self.color = color
 
-
-
+#Create a class for couting objects.
 class Count:
     def __init__(self):
         self.c = 0
@@ -34,13 +37,20 @@ class Count:
         self.c = self.c + 1
     
 
+
+#Create global values for labels and such.
+choice = "Click below"
+textColor = "black"
+
+Counter = Count()
 #Create the factions
 uef = Faction("UEF", "blue")
 aeon = Faction("Aeon","green")
 cybran = Faction("Cybran","red")
 seraphim = Faction("Seraphim","yellow")
 
-Counter = Count()
+
+
 
 #add Widgets
 
